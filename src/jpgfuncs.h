@@ -66,10 +66,7 @@ void draw_at_cursor(double xpos, double ypos, std::vector<GLubyte> &pixs, int wh
 
     GLubyte theByte = selectedColor;
     if(isoddpix) {
-        std::cout << "is odd" << '\n';
         theByte |= PGInfo::LIQUID_TRAV_LEFT_BIT;
-    } else {
-        std::cout << "is not odd" << '\n';
     }
     if(index != dwidth*(dheight-1)) {
         pixs[index] = theByte;
